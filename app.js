@@ -30,6 +30,10 @@ io.on('connection',(socket)=>{
         text:'Segunda prueba',
         createdAt:192140921
         });
+
+        socket.on('clientNewMessage',(msg)=>{
+            io.emit('serverNewMessage',"WHOLALAAA");
+        });
 });
 
 
